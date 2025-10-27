@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="İmages/coffe.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .hoverme {
+        color: #625231;
+        font-family: "Roboto Mono", monospace;
+        font-weight: 400;
+        transition: all 0.5s ease;
+        margin: 10px;
+        border-radius: 10px;
+      }
+
+      .hoverme:hover {
+        background-color: #625231;
+        color: rgb(253, 253, 253);
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
+
+      #head-coffe {
+        background-image: url(İmages/img-one-head.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 640px;
+      }
+
+      .container-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .CARDS {
+        width: 346px;
+        height: auto;
+        /* içerik kadar*/
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 20px;
+        text-align: left;
+        border: 2px solid transparent;
+        padding: 22px;
+        transition: all 0.5s ease;
+      }
+
+      .btn-grad {
+        all: unset;
+        border: 0.5px solid #6b3f2f;
+        padding: 6px;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+      }
+
+      .CARDS:hover {
+        transform: translateY(-10px);
+        border-color: #6b3f2f;
+        cursor: pointer;
+        color: #6b3f2f;
+      }
+
+      .CARDS:hover .btn-grad {
+        background-color: #6b3f2f;
+        color: white;
+        cursor: pointer;
+      }
+
+      .CARDS i {
+        color: #6b3f2f;
+        font-size: 20px;
+        padding-bottom: 18px;
+        display: inline-block;
+      }
+
+      .CARDS h3 {
+        font-size: 20px;
+      }
+
+      .CARDS p {
+        font-family: "Open Sans", sans-serif;
+        font-style: italic;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      @media (max-width: 380px) {
+        .CARDS p {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .container-img {
+          flex-direction: column;
+        }
+
+        .container-img .wd {
+          width: 100%;
+        }
+
+        .CARDS h3 {
+          font-size: 17px;
+        }
+
+        .CARDS .btn-grad {
+          font-size: 15px;
+        }
+
+        .respon-title {
+          font-size: 14px !important;
+        }
+        .dv-coffee h5 {
+          font-size: 14px !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hoverme {
+          font-size: 15px;
+        }
+        #footer-cf h6 {
+          font-size: 15px !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .media-column {
+          flex-direction: column !important;
+        }
+      }
+
+      .container-img {
+        display: flex;
+        margin-top: 8px;
+        margin-bottom: 30px;
+      }
+
+      .container-img img {
+        width: 50%;
+        pointer-events: none;
+      }
+
+      #footer-cf {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-img-top {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
+
+      .card {
+        transition: all 0.5s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+      }
+
+      .hover-img img {
+        animation: hoverimg 4s linear infinite;
+      }
+
+      @keyframes hoverimg {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        40% {
+          transform: rotate(60deg);
+        }
+
+        60% {
+          transform: rotate(70deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .footer-icon i {
+        display: inline-block;
+        font-size: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .footer-icon i:hover {
+        cursor: pointer;
+        transform: translateY(-5px);
+      }
+
+      .fa-instagram {
+        color: #dd2a7b;
+      }
+
+      .fa-facebook {
+        color: #3b5998;
+      }
+
+      .fa-linkedin {
+        color: #0077b5;
+      }
+
+      .fa-x-twitter {
+        color: #14171a;
+      }
+
+      .hovermr {
+        font-family: "Roboto Mono", monospace;
+      }
+
+      .hovermr:hover {
+        color: #6b3f2f;
+        cursor: pointer;
+      }
+
+      .dv-coffee {
+        text-align: center;
+        width: 250px;
+        border-radius: 20px;
+        height: 450px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 23px 23px;
+        transition: all 0.5s ease;
+      }
+
+      .dv-coffee:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .dv-coffee .img-one {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+        height: 240px;
+        background-position: center center;
+        background-size: cover;
+      }
+      .dv-coffee h5 {
+        font-family: "Roboto Mono", monospace;
+        font-weight: 500;
+        display: inline-block;
+        background-color: #6b3f2f;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .dv-coffee p {
+        font-family: "Roboto Mono", monospace;
+        font-size: 14px;
+        padding-top: 10px;
+        color: #625231;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--navbar-->
+    <nav class="navbar bg-body-secondary navbar-expand-lg">
+      <!--992px ekranlarda altında hamburger menü-->
+      <div class="container-fluid hover-img">
+        <a class="navbar-brand" href="Web-First.html">
+          <img
+            src="İmages/coffe.png"
+            style="width: 50px"
+            alt="Coffe-Shop-Logo"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          title="Navbar-Toggle"
+        >
+          <i class="bi bi-list fs-1"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav text-center">
+            <a class="nav-link hoverme" href="#brach">Partners And Options</a>
+            <a class="nav-link hoverme" href="#card-about">Services</a>
+            <a
+              class="nav-link hoverme"
+              data-bs-toggle="modal"
+              data-bs-target="#menu-coffe"
+              >View Menu</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header id="head-coffe"></header>
+
+    <section style="padding: 30px" id="card-about">
+      <div class="container-section">
+        <div class="CARDS">
+          <i class="fa-solid fa-info"></i>
+          <h3>About Us</h3>
+          <p>
+            At Aroma Haven, we believe that every cup tells a story. Since our
+            humble beginnings, we’ve dedicated ourselves to creating a warm and
+            welcoming space where people can relax, connect, and recharge. Our
+            team is passionate about quality, hospitality, and
+            authenticity—values that guide everything we do.
+          </p>
+          <button
+            type="button"
+            class="btn-grad"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="CARDS">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Our Food</h3>
+          <p>
+            Our kitchen celebrates simplicity with a touch of artistry. Every
+            dish is crafted using fresh, locally sourced ingredients to bring
+            you flavors that are both familiar and exciting. From hearty
+            breakfasts and wholesome salads to comforting sandwiches and artisan
+            pastries, our menu offers something for every mood and moment.
+          </p>
+          <button
+            type="button"
+            class="btn-grad"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop2"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="CARDS">
+          <i class="fa-solid fa-wine-bottle"></i>
+          <h3>Our Drinks</h3>
+          <p>
+            Refresh your day with our wide selection of beverages, made to suit
+            every occasion. Whether it’s a freshly pressed juice, a handcrafted
+            smoothie, or a sparkling iced tea, we focus on balance, flavor, and
+            freshness. Each drink is prepared with care, combining natural
+            ingredients that awaken the senses.
+          </p>
+          <button
+            type="button"
+            class="btn-grad"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop3"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="CARDS">
+          <i class="fa-solid fa-mug-hot"></i>
+          <h3>Excellent coffee</h3>
+          <p>
+            Our coffee is more than a beverage—it’s an experience. We partner
+            with trusted roasters who share our commitment to quality and
+            sustainability, ensuring every bean tells a story of craftsmanship.
+            From rich espressos and smooth cappuccinos to creative seasonal
+            brews, each cup is brewed to perfection by our skilled baristas.
+          </p>
+          <button
+            type="button"
+            class="btn-grad"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop4"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="container-img">
+      <img
+        class="wd"
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=675&fit=crop"
+        alt="section-1"
+      />
+      <img
+        class="wd"
+        src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&h=675&fit=crop"
+        alt="section-2"
+      />
+    </div>
+    <div class="d-flex justify-content-center mb-3">
+      <span
+        style="
+          font-family: Roboto Mono, monospace;
+          color: #6b3f2f;
+          border-bottom: 0.5px solid #6b3f2f;
+          padding-bottom: 5px;
+          font-size: 17px;
+          font-weight: 500;
+        "
+        >Our Options</span
+      >
+    </div>
+    <div class="p-4 mb-5 d-flex justify-content-around flex-wrap gap-5">
+      <div class="dv-coffee">
+        <div
+          class="img-one"
+          style="background-image: url(İmages/img-one-section.jpg)"
+        ></div>
+        <div class="p-3">
+          <h5 class="fs-6">Coffees</h5>
+          <p style="font-weight: 500">
+            Carefully selected coffee beans bring rich aroma and flavor. From
+            espresso to latte, each sip provides a unique coffee experience.
+          </p>
+        </div>
+      </div>
+      <div class="dv-coffee">
+        <div
+          class="img-one"
+          style="background-image: url(İmages/img-two-section.jpg)"
+        ></div>
+        <div class="p-3">
+          <h5 class="fs-6">Sweets</h5>
+          <p style="font-weight: 500">
+            Delightful desserts with chocolate, cream, and fresh fruit flavors
+            make every bite a joyful and indulgent treat.
+          </p>
+        </div>
+      </div>
+      <div class="dv-coffee">
+        <div
+          class="img-one"
+          style="background-image: url(İmages/img-tree-section.jpg)"
+        ></div>
+        <div class="p-3">
+          <h5 class="fs-6">Foods</h5>
+          <p style="font-weight: 500">
+            Fresh ingredients and crafted recipes deliver tasty, satisfying
+            meals that bring flavor and joy to every bite.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <span
+        class="fs-6 p-2 rounded-2"
+        style="
+          color: white;
+          font-family: Roboto mono, monospace;
+          background-color: #6b3f2f;
+        "
+        >Partners</span
+      >
+    </div>
+    <div
+      class="d-flex justify-content-center mb-4 flex-wrap gap-5 mt-5"
+      id="brach"
+    >
+      <div>
+        <img
+          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/a32313390c475bec9fff6116/black-logo-1.png"
+          alt="Company-1"
+          style="height: 100px; pointer-events: none"
+        />
+      </div>
+      <div>
+        <img
+          src="https://images01.nicepage.com/thumbs/a1389d7bc73adea1e1c1fb7e/e8ce7cced71d5c7aa4d002e1/black-logo-2_150.png"
+          style="height: 100px; pointer-events: none"
+          alt="Company-2"
+        />
+      </div>
+      <div>
+        <img
+          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/8aba9edd10b65867bb8c1fd0/black-logo-3.png"
+          alt="Company-3"
+          style="height: 100px; pointer-events: none"
+        />
+      </div>
+      <div>
+        <img
+          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/da20b91fac9e573f9e813582/black-logo-4.png"
+          alt="Company-4"
+          style="height: 100px; pointer-events: none"
+        />
+      </div>
+      <div>
+        <img
+          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/f4c2ec35cca95ad2b1db886b/black-logo-5.png"
+          alt="Company-5"
+          style="height: 100px; pointer-events: none"
+        />
+      </div>
+    </div>
+
+    <footer id="footer-cf" class="bg-light p-4">
+      <div class="d-flex justify-content-center flex-row media-column">
+        <div class="text-center footer-icon">
+          <h6
+            style="
+              padding-bottom: 7px;
+              font-family: Roboto Mono, monospace;
+              color: #6b3f2f;
+              font-weight: 400;
+            "
+          >
+            Social Media Accounts
+          </h6>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa-brands fa-instagram me-2"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook me-2"></i
+          ></a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><i class="fa-brands fa-linkedin me-2"></i
+          ></a>
+          <a href="https://x.com/" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 respon-title"
+              style="color: #6b3f2f"
+              id="staticBackdropLabel"
+            >
+              About Us
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p
+              style="
+                font-family: Roboto Mono, monospace;
+                font-size: 15px;
+                line-height: 25px;
+                font-style: italic;
+                color: #6b3f2f;
+              "
+            >
+              From sourcing sustainable ingredients to perfecting every recipe,
+              we pour care and creativity into every detail. Step inside and
+              feel the blend of comfort, flavor, and community that defines who
+              we are.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop2"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 respon-title"
+              style="color: #6b3f2f"
+              id="staticBackdropLabel"
+            >
+              Our Food
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p
+              style="
+                font-family: Roboto Mono, monospace;
+                font-size: 15px;
+                line-height: 25px;
+                font-style: italic;
+                color: #6b3f2f;
+              "
+            >
+              We take pride in creating food that nourishes not only the body
+              but also the soul—each plate prepared with passion, precision, and
+              a love for good taste.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop3"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 respon-title"
+              style="color: #6b3f2f"
+              id="staticBackdropLabel"
+            >
+              Our Drinks
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p
+              style="
+                font-family: Roboto Mono, monospace;
+                font-size: 15px;
+                line-height: 25px;
+                font-style: italic;
+                color: #6b3f2f;
+              "
+            >
+              From energizing options to soothing blends, our drink menu invites
+              you to explore vibrant colors and refreshing tastes that
+              complement any meal or conversation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop4"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 respon-title"
+              style="color: #6b3f2f"
+              id="staticBackdropLabel"
+            >
+              Excellent coffee
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p
+              style="
+                font-family: Roboto Mono, monospace;
+                font-size: 15px;
+                line-height: 25px;
+                font-style: italic;
+                color: #6b3f2f;
+              "
+            >
+              With every sip, you’ll discover the harmony of aroma, texture, and
+              flavor that makes our coffee truly exceptional—crafted for those
+              who appreciate the art of a great cup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="menu-coffe"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 respon-title"
+              style="color: #6b3f2f"
+              id="staticBackdropLabel"
+            >
+              Coffee Menu
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container text-center">
+              <div class="row row-cols-2 row-cols-md-3 g-3">
+                <!-- 1 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-1.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Espresso"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Espresso
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        58₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-2.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Cappuccino"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Cappuccin
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        70₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-3.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Latte"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Latte
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        72₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-4.jpeg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Americano"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Americano
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        65₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-5.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Macchiato"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Macchiato
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        74₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-6.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Mocha"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Mocha
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        85₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-7.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Flat White"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Flat White
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        78₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-8.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Iced Coffee"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Iced Coffee
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        80₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-9.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Affogato"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Affogato
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        95₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/menu-10.jpg"
+                      style="pointer-events: none"
+                      class="card-img-top"
+                      alt="Turkish Coffee"
+                    />
+                    <div class="card-body">
+                      <h6
+                        class="card-title respon-title"
+                        style="color: #6b3f2f"
+                      >
+                        Turkish Coffee
+                      </h6>
+                      <p
+                        class="fs-6 d-inline-block border-bottom"
+                        style="
+                          font-family: Roboto Mono, monospace;
+                          color: #6b3f2f !important;
+                          border-color: #6b3f2f !important;
+                        "
+                      >
+                        55₺
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
