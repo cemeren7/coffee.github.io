@@ -1,0 +1,573 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.hoverme {
+  color: #857656;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  transition: all 0.5s ease;
+  margin: 10px;
+}
+
+#NavFixed .navbar-brand {
+  transition: transform 0.6s ease;
+}
+
+#NavFixed .navbar-brand:hover {
+  transform: translateY(-5px);
+}
+
+.hoverme i {
+  transition: all 0.6s ease;
+}
+
+.hoverme:hover i {
+  transform: translateX(5px);
+}
+
+.hoverme:hover {
+  transform: translateX(7px);
+  color: #4d4129;
+  cursor: pointer;
+}
+
+#head-coffe {
+  width: 100%;
+  height: 710px;
+}
+
+#head-coffe .carousel,
+#head-coffe .carousel-inner,
+#head-coffe .carousel-item {
+  height: 100%;
+}
+
+.container-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.CARDS {
+  width: 346px;
+  height: auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid transparent;
+  padding: 22px;
+  transition: all 0.6s ease;
+}
+
+.btn-grad {
+  all: unset;
+  border: 0.5px solid #6b3f2f;
+  padding: 6px;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+.CARDS:hover {
+  cursor: pointer;
+  transform: translateY(5px);
+  border-color: #6b3f2f;
+  color: #6b3f2f;
+}
+
+.CARDS:hover .btn-grad {
+  background-color: #6b3f2f;
+  color: white;
+}
+
+.CARDS i {
+  color: #6b3f2f;
+  font-size: 20px;
+  padding-bottom: 18px;
+  display: inline-block;
+}
+
+.CARDS h3 {
+  font-size: 20px;
+}
+
+.CARDS p {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@media (max-width: 380px) {
+  .CARDS p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 990px) {
+  #navbarNavAltMarkup .hoverme i {
+    display: none !important;
+  }
+
+  #navbarNavAltMarkup .hoverme:hover {
+    transform: translateY(3px);
+  }
+}
+
+@media (max-width: 715px) {
+  .response-acordion {
+    padding: 23px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-img {
+    flex-direction: column;
+  }
+
+  .coffee-shop-contact-two .flex-container {
+    padding: 15px;
+  }
+
+  .jobs .modal-dialog .modal-content .modal-body .form-label {
+    font-size: 13px !important;
+  }
+
+  .jobs .modal-dialog .modal-content .modal-body input,
+  .jobs .modal-dialog .modal-content .modal-body select {
+    font-size: 14px !important;
+  }
+
+  .detailsmodal .modal-dialog .modal-content .modal-body li {
+    font-size: 14px !important;
+  }
+
+  .coffee-shop-contact-two .contact-section h5 {
+    font-size: 17px;
+  }
+
+  .coffee-shop-contact-two .contact-section p,
+  button {
+    font-size: 14px !important;
+  }
+
+  .swiper .swiper-wrapper .swiper-slide img {
+    width: 180px !important;
+  }
+
+  .container-img .wd {
+    width: 100%;
+  }
+
+  .CARDS h3 {
+    font-size: 17px;
+  }
+
+  .CARDS .btn-grad {
+    font-size: 14px;
+  }
+
+  label,
+  button[type="submit"] {
+    font-size: 14px !important;
+  }
+
+  .respon-title {
+    font-size: 14px !important;
+  }
+
+  .modal .modal-dialog .modal-content .modal-header .respon-title {
+    font-size: 16px !important;
+  }
+
+  .modal .modal-dialog .modal-content .modal-body .card-body button {
+    font-size: 13px !important;
+  }
+
+  .modal .modal-dialog .modal-content .modal-body p {
+    font-size: 14px !important;
+  }
+
+  .respon-title2 {
+    font-size: 15px;
+  }
+
+  .accordion .accordion-item .accordion-button {
+    font-size: 13px !important;
+  }
+
+  .titles span {
+    font-size: 13px !important;
+  }
+
+  .address-box {
+    font-size: 14px !important;
+  }
+
+  form .title-span span {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hoverme {
+    font-size: 15px;
+  }
+
+  .media-column {
+    flex-direction: column !important;
+  }
+}
+
+.container-img {
+  display: flex;
+  margin-top: 8px;
+  border-bottom: 0.5px solid white;
+}
+
+.container-img img {
+  width: 50%;
+}
+
+.respon-title {
+  color: #6b3f2f;
+}
+
+.titles span {
+  font-family: "Roboto Mono", monospace;
+  background-color: #6b3f2f;
+  color: white;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 7px;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card {
+  transition: all 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(5px);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.card button {
+  background-color: #6b3f2f !important;
+  color: white !important;
+  transition: all 0.6s ease;
+}
+
+.card button:hover,
+.card button.active {
+  background-color: white !important;
+  color: #6b3f2f !important;
+  border: 0.5px solid #6b3f2f;
+  transform: translateX(-5px);
+}
+
+.hovermr {
+  font-family: "Roboto Mono", monospace;
+}
+
+.hovermr:hover {
+  color: #57382d;
+  cursor: pointer;
+}
+
+.address-box {
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+  color: #6b3f2f;
+}
+
+.address-box i {
+  color: #6b3f2f;
+}
+
+form i {
+  color: #6b3f2f;
+}
+
+label {
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+  color: #6b3f2f;
+}
+
+button[type="submit"] {
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+}
+
+button[type="submit"] i {
+  color: white;
+}
+
+button[type="submit"]:hover {
+  border: 1px solid #6b3f2f;
+}
+
+form .title-span span {
+  background-color: #6b3f2f;
+  color: white;
+  border-radius: 15px;
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Roboto Mono", monospace;
+}
+textarea {
+  height: 120px;
+}
+#head-coffe .carousel .carousel-inner .carousel-item img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.swiper .swiper-wrapper .swiper-slide img {
+  width: 230px;
+}
+
+.response-acordion .accordion .accordion-item .accordion-header button,
+.response-acordion .accordion .accordion-item .accordion-header i {
+  color: #6b3f2f;
+}
+
+.response-acordion .accordion .accordion-item .accordion-header button {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14.4px;
+  font-weight: 500;
+}
+
+.response-acordion .accordion .accordion-item .accordion-body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b3f2f;
+  font-weight: 500;
+}
+
+.response-img img {
+  width: 250px;
+  transition:
+    filter 0.6s ease,
+    transform 0.6s ease;
+  filter: blur(1px);
+  border-radius: 5px;
+}
+
+.response-img img:hover {
+  cursor: pointer;
+  filter: blur(0px);
+}
+
+.card .card-body p {
+  font-family: "Roboto Mono", monospace;
+  color: #6b3f2f !important;
+  border-color: #6b3f2f !important;
+}
+
+.modal .modal-dialog .modal-content .modal-body p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: normal;
+  color: #6b3f2f;
+}
+
+.coffee-shop-contact-two {
+  width: 100%;
+  height: 455px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1920&auto=format&fit=crop);
+}
+
+.coffee-shop-contact-two .flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 425px;
+}
+
+.coffee-shop-contact-two .contact-section {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+.coffee-shop-contact-two .contact-section button {
+  all: unset;
+  background-color: #c37c62;
+  padding: 7px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.coffee-shop-contact-two .contact-section button i {
+  transition: all 0.6s ease !important;
+}
+
+.coffee-shop-contact-two .contact-section button:hover i {
+  transform: translateX(5px);
+}
+
+.coffee-shop-contact-two .contact-section button:hover {
+  background-color: #b3684d;
+  transform: translateX(5px);
+}
+
+input,
+textarea,
+select {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px !important;
+}
+
+#btn-top {
+  transition: all 0.6s ease;
+}
+
+#btn-top:hover {
+  background-color: black !important;
+  color: white !important;
+  border: 0.5px solid white !important;
+}
+
+#Contac-job .modal-dialog .modal-content .modal-body form label {
+  background-color: #6b3f2f;
+  color: white;
+  padding: 6px;
+  border-radius: 7px;
+}
+
+input[type="file"],
+input::placeholder {
+  color: #212529 !important;
+}
+
+.detailsmodal .modal-dialog .modal-content .modal-header .modal-title,
+.detailsmodal .modal-dialog .modal-content .modal-body {
+  color: #6b3f2f;
+}
+
+.detailsmodal .modal-dialog .modal-content .modal-body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+/*navbar toggle button*/
+.btn-close:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.navbar-toggler {
+  transition: all 0.6s ease;
+}
+
+.navbar-toggler:focus {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
+}
+
+.navbar-toggler:hover {
+  transform: translateX(-5px);
+}
+
+/* all modal i select */
+.modal .modal-dialog .modal-content .modal-header i {
+  margin-right: 0.25rem;
+}
+
+footer {
+  padding: 40px 0;
+}
+
+#btn-top i {
+  transition: transform 0.6s ease;
+}
+#btn-top:hover i {
+  transform: translateY(-4px);
+}
+
+#btn-send {
+  transition: all 0.6s ease;
+}
+
+#btn-send:hover {
+  background-color: transparent !important;
+  color: #6c757d;
+  border-color: #6c757d !important;
+}
+
+#btn-send i {
+  transition: all 0.6s ease;
+}
+
+#btn-send:hover i {
+  color: #6c757d;
+}
+
+.response-acordion .accordion {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+#brach .address-box,
+#brach form,
+#brach iframe {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.radio-wrapper-18 > input {
+  position: absolute;
+  appearance: none;
+}
+
+.radio-wrapper-18 > label {
+  float: right;
+  cursor: pointer;
+  font-size: 23px;
+  fill: #666;
+}
+
+.radio-wrapper-18 > label > svg {
+  fill: #666;
+  transition: fill 0.3s ease;
+}
+
+.radio-wrapper-18 > input:checked + label:hover,
+.radio-wrapper-18 > input:checked + label:hover ~ label,
+.radio-wrapper-18 > input:checked ~ label:hover,
+.radio-wrapper-18 > input:checked ~ label:hover ~ label,
+.radio-wrapper-18 > label:hover ~ input:checked ~ label {
+  fill: #e58e09;
+}
+
+.radio-wrapper-18 > label:hover,
+.radio-wrapper-18 > label:hover ~ label {
+  fill: #ff9e0b;
+}
+
+.radio-wrapper-18 > input:checked ~ label > svg {
+  fill: #ffa723;
+}

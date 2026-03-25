@@ -11,14 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <script
@@ -39,285 +48,19 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-      }
-
-      .hoverme {
-        color: #857656;
-        font-family: "Roboto Mono", monospace;
-        font-weight: 400;
-        transition: all 0.5s ease;
-        margin: 10px;
-      }
-
-      .hoverme:hover {
-        color: #4d4129;
-        cursor: pointer;
-      }
-
-      #head-coffe {
-        background-image: url(İmages/img-one-head.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        height: 640px;
-      }
-
-      .container-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        flex-wrap: wrap;
-      }
-
-      .CARDS {
-        width: 346px;
-        height: auto;
-        /* içerik kadar*/
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        border-radius: 20px;
-        text-align: left;
-        border: 2px solid transparent;
-        padding: 22px;
-        transition: all 0.6s ease;
-      }
-
-      .btn-grad {
-        all: unset;
-        border: 0.5px solid #6b3f2f;
-        padding: 6px;
-        border-radius: 5px;
-        transition: all 0.6s ease;
-      }
-
-      .CARDS:hover {
-        transform: translateY(-10px);
-        border-color: #6b3f2f;
-        cursor: pointer;
-        color: #6b3f2f;
-      }
-
-      .CARDS:hover .btn-grad {
-        background-color: #6b3f2f;
-        color: white;
-        cursor: pointer;
-      }
-
-      .CARDS i {
-        color: #6b3f2f;
-        font-size: 20px;
-        padding-bottom: 18px;
-        display: inline-block;
-      }
-
-      .CARDS h3 {
-        font-size: 20px;
-      }
-
-      .CARDS p {
-        font-family: "Open Sans", sans-serif;
-        font-style: italic;
-        font-size: 15px;
-        line-height: 24px;
-      }
-
-      @media (max-width: 380px) {
-        .CARDS p {
-          font-size: 14px;
-        }
-      }
-
-      @media (max-width: 800px) {
-        .container-img {
-          flex-direction: column;
-        }
-
-        .container-img .wd {
-          width: 100%;
-        }
-
-        .CARDS h3 {
-          font-size: 17px;
-        }
-
-        .CARDS .btn-grad {
-          font-size: 15px;
-        }
-
-        .respon-title {
-          font-size: 14px !important;
-        }
-        .dv-coffee h5 {
-          font-size: 14px !important;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .hoverme {
-          font-size: 15px;
-        }
-        #footer-cf h6 {
-          font-size: 15px !important;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .media-column {
-          flex-direction: column !important;
-        }
-      }
-
-      .container-img {
-        display: flex;
-        margin-top: 8px;
-        margin-bottom: 30px;
-      }
-
-      .container-img img {
-        width: 50%;
-        pointer-events: none;
-      }
-
-      #footer-cf {
-        width: 100%;
-        height: auto;
-      }
-
-      .card-img-top {
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-      }
-
-      .card {
-        transition: all 0.6s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-      }
-
-      .hover-img img {
-        animation: hoverimg 4s linear infinite;
-      }
-
-      @keyframes hoverimg {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        40% {
-          transform: rotate(60deg);
-        }
-
-        60% {
-          transform: rotate(70deg);
-        }
-
-        100% {
-          transform: rotate(0deg);
-        }
-      }
-
-      .footer-icon i {
-        display: inline-block;
-        font-size: 20px;
-        transition: all 0.5s ease;
-      }
-
-      .footer-icon i:hover {
-        cursor: pointer;
-        transform: translateY(-5px);
-      }
-
-      .fa-instagram {
-        color: #dd2a7b;
-      }
-
-      .fa-facebook {
-        color: #3b5998;
-      }
-
-      .fa-linkedin {
-        color: #0077b5;
-      }
-
-      .fa-x-twitter {
-        color: #14171a;
-      }
-
-      .hovermr {
-        font-family: "Roboto Mono", monospace;
-      }
-
-      .hovermr:hover {
-        color: #57382d;
-        cursor: pointer;
-      }
-
-      .dv-coffee {
-        text-align: center;
-        width: 250px;
-        border-radius: 20px;
-        height: 450px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 23px 23px;
-        transition: all 0.6s ease;
-      }
-
-      .dv-coffee:hover {
-        transform: translateY(-10px);
-        cursor: pointer;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .dv-coffee .img-one {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        width: 100%;
-        height: 240px;
-        background-position: center center;
-        background-size: cover;
-      }
-      .dv-coffee h5 {
-        font-family: "Roboto Mono", monospace;
-        font-weight: 500;
-        display: inline-block;
-        background-color: #6b3f2f;
-        color: white;
-        padding: 5px;
-        border-radius: 5px;
-      }
-      .dv-coffee p {
-        font-family: "Roboto Mono", monospace;
-        font-size: 14px;
-        padding-top: 10px;
-        color: #625231;
-      }
-      #NavFixed {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 999;
-      }
-    </style>
+    <link rel="stylesheet" href="Shop-Coffee.css" />
   </head>
-
   <body>
-    <!--navbar-->
-    <nav class="navbar bg-body-secondary navbar-expand-lg" id="NavFixed">
-      <!--992px ekranlarda altında hamburger menü-->
-      <div class="container-fluid hover-img">
+    <div class="position-fixed end-0 p-2 bottom-0" style="z-index: 999">
+      <button
+        class="btn btn-light rounded-3 text-black border shadow-lg border-black"
+        id="btn-top"
+      >
+        <i class="fa-solid fa-arrow-up-long"></i>
+      </button>
+    </div>
+    <nav class="navbar bg-light navbar-expand-lg" id="NavFixed">
+      <div class="container">
         <a class="navbar-brand" href="Shop-Coffee.html">
           <img
             src="İmages/coffe.png"
@@ -341,26 +84,125 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav text-center">
-            <a class="nav-link hoverme" href="#brach">Partners And Options</a>
-            <a class="nav-link hoverme" href="#card-about">Services</a>
+            <a class="nav-link hoverme" href="#brach"
+              ><i class="fa-solid fa-arrow-right me-2 fs-6"></i>Contact
+            </a>
+            <a class="nav-link hoverme" href="#card-about"
+              ><i class="fa-solid fa-arrow-right me-2 fs-6"></i>Services</a
+            >
             <a
               class="nav-link hoverme"
               data-bs-toggle="modal"
               data-bs-target="#menu-coffe"
-              >View Menu</a
+              ><i class="fa-solid fa-arrow-right me-2 fs-6"></i>View Menu</a
+            >
+            <a class="nav-link hoverme" href="#partn"
+              ><i class="fa-solid fa-arrow-right me-2 fs-6"></i>Partners</a
             >
           </div>
         </div>
       </div>
     </nav>
 
-    <header id="head-coffe"></header>
+    <header id="head-coffe" class="position-relative">
+      <div id="headSlider" class="carousel slide h-100">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#headSlider"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#headSlider"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#headSlider"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#headSlider"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#headSlider"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=3000&h=2004&fit=crop&auto=format&q=80"
+              class="d-block w-100 h-100"
+              alt="Kahve ve masa üstü minimal"
+            />
+          </div>
+          <div class="carousel-item h-100">
+            <img
+              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=3000&h=2004&fit=crop&auto=format&q=80"
+              class="d-block w-100 h-100"
+              alt="Minimal kahve çekimi"
+            />
+          </div>
+          <div class="carousel-item h-100">
+            <img
+              src="İmages/img-one-head.jpg"
+              class="d-block w-100 h-100"
+              alt="Minimal kahve çekimi"
+            />
+          </div>
+          <div class="carousel-item h-100">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=3000&h=2004&fit=crop&auto=format&q=80"
+              class="d-block w-100 h-100"
+              alt="Minimal kahve çekimi"
+            />
+          </div>
+          <div class="carousel-item h-100">
+            <img
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=3000&h=2000&fit=crop&auto=format&q=80"
+              class="d-block w-100 h-100"
+              alt="Kahve fincanı ve kahve çekirdekleri"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#headSlider"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#headSlider"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
 
     <section style="padding: 30px" id="card-about">
       <div class="container-section">
-        <div class="CARDS">
+        <div class="CARDS modal-auto">
           <i class="fa-solid fa-info"></i>
-          <h3>About Us</h3>
+          <h3 class="respon-title2">About Us</h3>
           <p>
             At Aroma Haven, we believe that every cup tells a story. Since our
             humble beginnings, we’ve dedicated ourselves to creating a warm and
@@ -377,9 +219,9 @@
             Read More
           </button>
         </div>
-        <div class="CARDS">
+        <div class="CARDS modal-auto">
           <i class="fa-solid fa-utensils"></i>
-          <h3>Our Food</h3>
+          <h3 class="respon-title2">Our Foods</h3>
           <p>
             Our kitchen celebrates simplicity with a touch of artistry. Every
             dish is crafted using fresh, locally sourced ingredients to bring
@@ -396,9 +238,9 @@
             Read More
           </button>
         </div>
-        <div class="CARDS">
+        <div class="CARDS modal-auto">
           <i class="fa-solid fa-wine-bottle"></i>
-          <h3>Our Drinks</h3>
+          <h3 class="respon-title2">Our Drinks</h3>
           <p>
             Refresh your day with our wide selection of beverages, made to suit
             every occasion. Whether it’s a freshly pressed juice, a handcrafted
@@ -415,9 +257,9 @@
             Read More
           </button>
         </div>
-        <div class="CARDS">
+        <div class="CARDS modal-auto">
           <i class="fa-solid fa-mug-hot"></i>
-          <h3>Excellent coffee</h3>
+          <h3 class="respon-title2">Excellent Coffees</h3>
           <p>
             Our coffee is more than a beverage—it’s an experience. We partner
             with trusted roasters who share our commitment to quality and
@@ -448,146 +290,378 @@
         alt="section-2"
       />
     </div>
-    <div class="d-flex justify-content-center mb-3">
-      <span
-        style="
-          font-family:
-            Roboto Mono,
-            monospace;
-          color: #6b3f2f;
-          border-bottom: 0.5px solid #6b3f2f;
-          padding-bottom: 5px;
-          font-size: 17px;
-          font-weight: 500;
-        "
-        >Our Options</span
-      >
-    </div>
-    <div class="p-4 mb-5 d-flex justify-content-around flex-wrap gap-5">
-      <div class="dv-coffee">
-        <div
-          class="img-one"
-          style="background-image: url(İmages/img-one-section.jpg)"
-        ></div>
-        <div class="p-3">
-          <h5 class="fs-6">Coffees</h5>
-          <p style="font-weight: 500">
-            Carefully selected coffee beans bring rich aroma and flavor. From
-            espresso to latte, each sip provides a unique coffee experience.
+    <div class="coffee-shop-contact-two">
+      <div class="flex-container">
+        <div class="contact-section">
+          <h5>Would you like to join us?</h5>
+          <p>
+            If you would like to join the Demo Coffee family as our franchise
+            partner and bring great coffee to more people, contact us!
           </p>
-        </div>
-      </div>
-      <div class="dv-coffee">
-        <div
-          class="img-one"
-          style="background-image: url(İmages/img-two-section.jpg)"
-        ></div>
-        <div class="p-3">
-          <h5 class="fs-6">Sweets</h5>
-          <p style="font-weight: 500">
-            Delightful desserts with chocolate, cream, and fresh fruit flavors
-            make every bite a joyful and indulgent treat.
-          </p>
-        </div>
-      </div>
-      <div class="dv-coffee">
-        <div
-          class="img-one"
-          style="background-image: url(İmages/img-tree-section.jpg)"
-        ></div>
-        <div class="p-3">
-          <h5 class="fs-6">Foods</h5>
-          <p style="font-weight: 500">
-            Fresh ingredients and crafted recipes deliver tasty, satisfying
-            meals that bring flavor and joy to every bite.
-          </p>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#Contac-job"
+          >
+            <i class="fa-solid fa-arrow-right me-2 fs-6"></i>Apply Now
+          </button>
         </div>
       </div>
     </div>
-    <div class="text-center">
-      <span
-        class="fs-6 p-2 rounded-2"
-        style="
-          color: white;
-          font-family:
-            Roboto mono,
-            monospace;
-          background-color: #6b3f2f;
-        "
-        >Partners</span
-      >
+    <div class="text-center pb-3 mt-4 titles">
+      <span><i class="fa-solid fa-star me-2"></i>Features & Benefits</span>
     </div>
-    <div
-      class="d-flex justify-content-center mb-4 flex-wrap gap-5 mt-5"
-      id="brach"
-    >
-      <div>
-        <img
-          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/a32313390c475bec9fff6116/black-logo-1.png"
-          alt="Company-1"
-          style="height: 100px; pointer-events: none"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images01.nicepage.com/thumbs/a1389d7bc73adea1e1c1fb7e/e8ce7cced71d5c7aa4d002e1/black-logo-2_150.png"
-          style="height: 100px; pointer-events: none"
-          alt="Company-2"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/8aba9edd10b65867bb8c1fd0/black-logo-3.png"
-          alt="Company-3"
-          style="height: 100px; pointer-events: none"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/da20b91fac9e573f9e813582/black-logo-4.png"
-          alt="Company-4"
-          style="height: 100px; pointer-events: none"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/f4c2ec35cca95ad2b1db886b/black-logo-5.png"
-          alt="Company-5"
-          style="height: 100px; pointer-events: none"
-        />
+    <div class="container p-3 response-acordion">
+      <div class="accordion accordion" id="coffeeAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingWiFi">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWiFi"
+              aria-expanded="false"
+              aria-controls="collapseWiFi"
+            >
+              <i class="fa-solid fa-wifi me-2"></i> Free Wi-Fi
+            </button>
+          </h2>
+          <div
+            id="collapseWiFi"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingWiFi"
+            data-bs-parent="#coffeeAccordion"
+          >
+            <div class="accordion-body">
+              Enjoy fast and free Wi-Fi at all our locations. Our high-speed
+              internet connection is suitable for online meetings, remote work,
+              and streaming. Whether you are studying, working on a project, or
+              simply browsing the web, you can stay connected comfortably in our
+              relaxed café environment.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTeam">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTeam"
+              aria-expanded="false"
+              aria-controls="collapseTeam"
+            >
+              <i class="fa-solid fa-users me-2"></i> Our Team
+            </button>
+          </h2>
+          <div
+            id="collapseTeam"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTeam"
+            data-bs-parent="#coffeeAccordion"
+          >
+            <div class="accordion-body">
+              Our team consists of skilled baristas and friendly staff who are
+              passionate about coffee and customer experience. Each team member
+              is trained to prepare high-quality beverages, provide quick
+              service, and create a welcoming atmosphere. We continuously
+              improve our service standards through regular training and
+              feedback.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingBranches">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseBranches"
+              aria-expanded="false"
+              aria-controls="collapseBranches"
+            >
+              <i class="fa-solid fa-location-dot me-2"></i> Branch Variety
+            </button>
+          </h2>
+          <div
+            id="collapseBranches"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingBranches"
+            data-bs-parent="#coffeeAccordion"
+          >
+            <div class="accordion-body">
+              We have multiple branches across the country, each designed with a
+              modern interior concept and comfortable seating areas. Our
+              branches are suitable for both individual visitors and groups. No
+              matter which branch you visit, you will find the same quality of
+              service, cozy atmosphere, and carefully prepared beverages.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <footer id="footer-cf" class="bg-light p-4">
-      <div class="d-flex justify-content-center flex-row media-column">
-        <div class="text-center footer-icon">
-          <h6
-            style="
-              padding-bottom: 7px;
-              font-family:
-                Roboto Mono,
-                monospace;
-              color: #6b3f2f;
-              font-weight: 400;
-            "
-          >
-            Social Media Accounts
-          </h6>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><i class="fa-brands fa-instagram me-2"></i
-          ></a>
-          <a href="https://www.facebook.com/" target="_blank"
-            ><i class="fa-brands fa-facebook me-2"></i
-          ></a>
-          <a href="https://www.linkedin.com/" target="_blank"
-            ><i class="fa-brands fa-linkedin me-2"></i
-          ></a>
-          <a href="https://x.com/" target="_blank"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
+    <div class="text-center p-3 titles" id="partn">
+      <span><i class="fa-solid fa-handshake me-2"></i>Partners</span>
+    </div>
+
+    <div class="container mt-3">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://cdn.prod.website-files.com/5f3cd3f6e12e6cfc56813de3/65400645a04a224f1efaf939_1024x1024-EB97CC92FA46861D1F5707B6B9134570.jpeg"
+              alt="Partner 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/premium-vector/vintage-coffee-logo-template_441059-221.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Partner 2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/free-vector/vintage-coffee-house-vector-logo-design_47987-24738.jpg"
+              alt="Partner 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://pbs.twimg.com/profile_images/1114286853052686337/8Njf6ftQ_400x400.png"
+              alt="Partner 4"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/premium-vector/love-coffee-shop-logo-vector-design-template_778302-1680.jpg"
+              alt="Partner 5"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://thumbs.dreamstime.com/b/coffee-logo-template-stylized-cup-47431859.jpg"
+              alt="Partner 6"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/007/248/989/non_2x/coffee-house-design-logo-icon-vector.jpg"
+              alt="Partner 7"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/004/854/407/small/coffee-house-logo-with-cup-of-coffee-and-roof-icon-symbol-free-vector.jpg"
+              alt="Partner 8"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/premium-vector/logo-cup-coffee-drink-business-design-company-brand_737924-4578.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Partner 9"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/007/625/280/non_2x/coffee-love-logo-design-good-for-cafes-coffee-shops-restaurants-and-bars-art-illustration-vector.jpg"
+              alt="Partner 10"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="text-center p-3 titles">
+      <span><i class="fa-solid fa-photo-film me-2"></i>Photos</span>
+    </div>
+
+    <div
+      class="d-flex justify-content-center align-items-center flex-wrap p-2 gap-2 response-img"
+    >
+      <img
+        src="https://images.pexels.com/photos/31777034/pexels-photo-31777034/free-photo-of-dekorlu-rahat-kahve-dukkani-tezgahi.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-1"
+        class="img-branch"
+      />
+      <img
+        src="https://images.pexels.com/photos/7021522/pexels-photo-7021522.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-2"
+        class="img-branch"
+      />
+      <img
+        src="https://images.pexels.com/photos/22089030/pexels-photo-22089030/free-photo-of-kafein-kahve-isaret-kafe.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-3"
+        class="img-branch"
+      />
+      <img
+        src="https://images.pexels.com/photos/25310962/pexels-photo-25310962/free-photo-of-bu-sekilde-kahve.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-4"
+        class="img-branch"
+      />
+      <img
+        src="https://images.pexels.com/photos/25560634/pexels-photo-25560634/free-photo-of-isik-parlak-acik-hafif.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-5"
+        class="img-branch"
+      />
+      <img
+        src="https://images.pexels.com/photos/15484160/pexels-photo-15484160/free-photo-of-gece-duvar-neon-duvarlar.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-6"
+        class="img-branch"
+      />
+      <img
+        src="https://images.pexels.com/photos/2867885/pexels-photo-2867885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="branch-7"
+        class="img-branch"
+      />
+    </div>
+
+    <div
+      class="p-4 d-flex justify-content-center align-items-center flex-wrap"
+      id="brach"
+    >
+      <div class="address-box bg-light rounded-start border p-3">
+        <div class="d-flex align-items-end gap-2 mb-3">
+          <i class="fa-solid fa-location-dot mb-1"></i>
+          <span>Atatürk Cd. No:12, Muratpaşa <b>/</b> Antalya</span>
+        </div>
+
+        <div class="d-flex align-items-end gap-2 mb-3">
+          <i class="fa-solid fa-phone mb-1"></i>
+          <span>+90 242 000 00 00</span>
+        </div>
+
+        <div class="d-flex align-items-end gap-2 mb-3">
+          <i class="fa-solid fa-clock mb-1"></i>
+          <span>Every Day 09:00 <b>-</b> 23:00</span>
+        </div>
+
+        <div class="d-flex align-items-end gap-2 mb-3">
+          <i class="fa-solid fa-envelope mb-1"></i>
+          <span>info@ornekfirma.com</span>
+        </div>
+
+        <div class="d-flex align-items-end gap-2">
+          <div class="radio-wrapper-18">
+            <input id="rating-18-5" type="radio" name="radio-examples" />
+            <label for="rating-18-5" title="text">
+              <svg
+                viewBox="0 0 576 512"
+                height="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                ></path>
+              </svg>
+            </label>
+            <input id="rating-18-4" type="radio" name="radio-examples" />
+            <label for="rating-18-4" title="text">
+              <svg
+                viewBox="0 0 576 512"
+                height="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                ></path>
+              </svg>
+            </label>
+            <input id="rating-18-3" type="radio" name="radio-examples" />
+            <label for="rating-18-3" title="text">
+              <svg
+                viewBox="0 0 576 512"
+                height="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                ></path>
+              </svg>
+            </label>
+            <input id="rating-18-2" type="radio" name="radio-examples" />
+            <label for="rating-18-2" title="text">
+              <svg
+                viewBox="0 0 576 512"
+                height="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                ></path>
+              </svg>
+            </label>
+            <input id="rating-18-1" type="radio" name="radio-examples" />
+            <label for="rating-18-1" title="text">
+              <svg
+                viewBox="0 0 576 512"
+                height="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                ></path>
+              </svg>
+            </label>
+          </div>
         </div>
       </div>
-    </footer>
+
+      <form
+        class="p-3 border rounded bg-light"
+        style="min-width: 320px; max-width: 450px; width: 100%"
+        autocomplete="off"
+      >
+        <div class="text-center pb-3 title-span">
+          <span
+            ><i class="fa-regular fa-address-book me-2 text-white"></i>Contact
+            Us</span
+          >
+        </div>
+        <div class="mb-3">
+          <label for="fullName" class="form-label border-secondary"
+            ><i class="fa-regular fa-user me-2"></i>First And Last Name</label
+          >
+          <input type="text" class="form-control" id="fullName" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label border-secondary"
+            ><i class="fa-solid fa-envelope-open me-2"></i>E-Mail</label
+          >
+          <input type="email" class="form-control" id="email" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label border-secondary"
+            ><i class="fa-solid fa-message me-2"></i>Message</label
+          >
+          <textarea
+            class="form-control"
+            id="message"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" id="btn-send" class="btn btn-secondary w-100">
+          <i class="fa-solid fa-paper-plane me-2"></i>Send
+        </button>
+      </form>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51050.00141856445!2d30.650177449999997!3d36.89931624999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1772521581840!5m2!1str!2str"
+        width="400"
+        height="300"
+        loading="lazy"
+        class="rounded-end border"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
 
     <div
       class="modal fade"
@@ -599,12 +673,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1
-              class="modal-title fs-5 respon-title"
-              style="color: #6b3f2f"
-              id="staticBackdropLabel"
-            >
-              About Us
+            <h1 class="modal-title fs-5 respon-title" id="staticBackdropLabel">
+              <i class="fa-solid fa-info"></i> About Us
             </h1>
             <button
               type="button"
@@ -614,17 +684,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p
-              style="
-                font-family:
-                  Roboto Mono,
-                  monospace;
-                font-size: 15px;
-                line-height: 25px;
-                font-style: italic;
-                color: #6b3f2f;
-              "
-            >
+            <p>
               From sourcing sustainable ingredients to perfecting every recipe,
               we pour care and creativity into every detail. Step inside and
               feel the blend of comfort, flavor, and community that defines who
@@ -645,12 +705,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1
-              class="modal-title fs-5 respon-title"
-              style="color: #6b3f2f"
-              id="staticBackdropLabel"
-            >
-              Our Food
+            <h1 class="modal-title fs-5 respon-title" id="staticBackdropLabel">
+              <i class="fa-solid fa-utensils"></i> Our Foods
             </h1>
             <button
               type="button"
@@ -660,17 +716,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p
-              style="
-                font-family:
-                  Roboto Mono,
-                  monospace;
-                font-size: 15px;
-                line-height: 25px;
-                font-style: italic;
-                color: #6b3f2f;
-              "
-            >
+            <p>
               We take pride in creating food that nourishes not only the body
               but also the soul—each plate prepared with passion, precision, and
               a love for good taste.
@@ -690,12 +736,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1
-              class="modal-title fs-5 respon-title"
-              style="color: #6b3f2f"
-              id="staticBackdropLabel"
-            >
-              Our Drinks
+            <h1 class="modal-title fs-5 respon-title" id="staticBackdropLabel">
+              <i class="fa-solid fa-wine-bottle"></i> Our Drinks
             </h1>
             <button
               type="button"
@@ -705,17 +747,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p
-              style="
-                font-family:
-                  Roboto Mono,
-                  monospace;
-                font-size: 15px;
-                line-height: 25px;
-                font-style: italic;
-                color: #6b3f2f;
-              "
-            >
+            <p>
               From energizing options to soothing blends, our drink menu invites
               you to explore vibrant colors and refreshing tastes that
               complement any meal or conversation.
@@ -735,12 +767,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1
-              class="modal-title fs-5 respon-title"
-              style="color: #6b3f2f"
-              id="staticBackdropLabel"
-            >
-              Excellent coffee
+            <h1 class="modal-title fs-5 respon-title" id="staticBackdropLabel">
+              <i class="fa-solid fa-mug-hot"></i> Excellent Coffees
             </h1>
             <button
               type="button"
@@ -750,17 +778,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p
-              style="
-                font-family:
-                  Roboto Mono,
-                  monospace;
-                font-size: 15px;
-                line-height: 25px;
-                font-style: italic;
-                color: #6b3f2f;
-              "
-            >
+            <p>
               With every sip, you’ll discover the harmony of aroma, texture, and
               flavor that makes our coffee truly exceptional—crafted for those
               who appreciate the art of a great cup.
@@ -780,12 +798,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1
-              class="modal-title fs-5 respon-title"
-              style="color: #6b3f2f"
-              id="staticBackdropLabel"
-            >
-              Coffee Menu
+            <h1 class="modal-title fs-5 respon-title" id="staticBackdropLabel">
+              <i class="fa-solid fa-mug-saucer fs-6"></i> Coffee Menu
             </h1>
             <button
               type="button"
@@ -797,322 +811,314 @@
           <div class="modal-body">
             <div class="container text-center">
               <div class="row row-cols-2 row-cols-md-3 g-3">
-                <!-- 1 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-1.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Espresso"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Espresso
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Espresso</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         58₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#espressoModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 2 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-2.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Cappuccino"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Cappuccin
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Cappuccino</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         70₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#cappuccinoModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 3 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-3.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Latte"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Latte
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Latte</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         72₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#latteModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 4 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-4.jpeg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Americano"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Americano
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Americano</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         65₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#americanoModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 5 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-5.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Macchiato"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Macchiato
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Macchiato</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         74₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-target="#macchiatoModal"
+                          data-bs-toggle="modal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 6 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-6.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Mocha"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Mocha
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Mocha</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         85₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#mochaModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 7 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-7.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Flat White"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Flat White
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Flat White</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         78₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#flatWhiteModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 8 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-8.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Iced Coffee"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Iced Coffee
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Iced Coffee</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         80₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#icedCoffeeModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 9 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-9.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Affogato"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Affogato
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Affogato</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         95₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#affogatoModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- 10 -->
                 <div class="col">
                   <div class="card h-auto border-0 shadow-sm">
                     <img
                       src="İmages/menu-10.jpg"
-                      style="pointer-events: none"
                       class="card-img-top"
                       alt="Turkish Coffee"
                     />
                     <div class="card-body">
-                      <h6
-                        class="card-title respon-title"
-                        style="color: #6b3f2f"
-                      >
-                        Turkish Coffee
-                      </h6>
-                      <p
-                        class="fs-6 d-inline-block border-bottom"
-                        style="
-                          font-family:
-                            Roboto Mono,
-                            monospace;
-                          color: #6b3f2f !important;
-                          border-color: #6b3f2f !important;
-                        "
-                      >
+                      <h6 class="card-title respon-title">Turkish Coffee</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
                         55₺
                       </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#turkishCoffeeModal"
+                        >
+                          Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/cold-brew-orginal.jpg"
+                      class="card-img-top"
+                      alt="Cold Brew"
+                    />
+                    <div class="card-body">
+                      <h6 class="card-title respon-title">Cold Brew</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
+                        60₺
+                      </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#coldBrewModal"
+                        >
+                          Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card h-auto border-0 shadow-sm">
+                    <img
+                      src="İmages/cold-brew.jpg"
+                      class="card-img-top"
+                      alt="Nitro Cold Brew"
+                    />
+                    <div class="card-body">
+                      <h6 class="card-title respon-title">N. Cold Brew</h6>
+                      <p class="fs-6 d-inline-block border-bottom border-2">
+                        75₺
+                      </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#nitroColdBrewModal"
+                        >
+                          Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1122,5 +1128,622 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade jobs" tabindex="-1" id="Contac-job">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title respon-title">
+              <i class="fa-solid fa-briefcase me-2"></i>Job Application
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter first name"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter last name"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Phone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="+90 5xx xxx xx xx"
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Position Applied For</label>
+                  <select class="form-select" required>
+                    <option selected disabled value="">Select position</option>
+                    <option>Barista</option>
+                    <option>Cashier</option>
+                    <option>Service Staff</option>
+                    <option>Kitchen Assistant</option>
+                    <option>Cleaning Staff</option>
+                    <option>Branch Manager</option>
+                    <option>Part-Time Staff</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Experience Level</label>
+                  <select class="form-select">
+                    <option selected disabled value="">
+                      Select experience
+                    </option>
+                    <option>No experience</option>
+                    <option>0 - 1 year</option>
+                    <option>1 - 3 years</option>
+                    <option>3 - 5 years</option>
+                    <option>5+ years</option>
+                    <option>Previously worked in a coffee shop</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Upload CV</label>
+                  <input type="file" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-secondary">
+              Send Application
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="espressoModal"
+      tabindex="-1"
+      aria-labelledby="espressoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title respon-title" id="espressoModalLabel">
+              <i class="fa-solid fa-list-ul"></i> Espresso
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin:</strong> 100% Arabica</li>
+              <li><strong>Milk:</strong> None</li>
+              <li><strong>Foam:</strong> Natural crema</li>
+              <li><strong>Taste:</strong> Bold, rich</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="cappuccinoModal"
+      tabindex="-1"
+      aria-labelledby="cappuccinoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title respon-title" id="cappuccinoModalLabel">
+              <i class="fa-solid fa-list-ul"></i> Cappuccino
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin:</strong> 100% Arabica</li>
+              <li><strong>Milk:</strong> Steamed milk</li>
+              <li><strong>Foam:</strong> Thick milk foam</li>
+              <li><strong>Taste:</strong> Creamy, balanced</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="latteModal"
+      tabindex="-1"
+      aria-labelledby="latteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title respon-title" id="latteModalLabel">
+              <i class="fa-solid fa-list-ul"></i> Latte
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin:</strong> 100% Arabica</li>
+              <li><strong>Milk:</strong> Steamed milk</li>
+              <li><strong>Foam:</strong> Light foam</li>
+              <li><strong>Taste:</strong> Smooth, milky</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="americanoModal"
+      tabindex="-1"
+      aria-labelledby="americanoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="americanoModalLabel">
+              <i class="fa-solid fa-list-ul"></i>Americano
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin:</strong> 100% Arabica</li>
+              <li><strong>Water:</strong> Hot water added</li>
+              <li><strong>Intensity:</strong> Medium</li>
+              <li><strong>Taste:</strong> Smooth, mild</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="macchiatoModal"
+      tabindex="-1"
+      aria-labelledby="macchiatoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="macchiatoModalLabel">
+              <i class="fa-solid fa-list-ul"></i>Macchiato
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin:</strong> 100% Arabica</li>
+              <li><strong>Milk:</strong> Small foam layer</li>
+              <li><strong>Serving:</strong> Espresso shot</li>
+              <li><strong>Taste:</strong> Strong, creamy hint</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="mochaModal"
+      tabindex="-1"
+      aria-labelledby="mochaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mochaModalLabel">
+              <i class="fa-solid fa-list-ul"></i>Mocha
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> 100% Arabica</li>
+              <li><strong>Milk: </strong> Steamed milk</li>
+              <li><strong>Flavor: </strong> Chocolate</li>
+              <li><strong>Taste: </strong> Sweet, rich</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="flatWhiteModal"
+      tabindex="-1"
+      aria-labelledby="flatWhiteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="flatWhiteModalLabel">
+              <i class="fa-solid fa-list-ul"></i>Flat White
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> 100% Arabica</li>
+              <li><strong>Milk: </strong> Microfoam milk</li>
+              <li><strong>Serving: </strong> Double espresso</li>
+              <li><strong>Taste: </strong> Smooth, velvety</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="icedCoffeeModal"
+      tabindex="-1"
+      aria-labelledby="icedCoffeeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="icedCoffeeModalLabel">
+              <i class="fa-solid fa-list-ul"></i>Iced Coffee
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> 100% Arabica</li>
+              <li><strong>Serving: </strong> Over ice</li>
+              <li><strong>Style: </strong> Cold coffee</li>
+              <li><strong>Taste: </strong> Refreshing, smooth</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="affogatoModal"
+      tabindex="-1"
+      aria-labelledby="affogatoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="affogatoModalLabel">
+              <i class="fa-solid fa-list-ul"></i>Affogato
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> 100% Arabica</li>
+              <li><strong>Added: </strong> Vanilla ice cream</li>
+              <li><strong>Serving: </strong> Espresso over ice cream</li>
+              <li><strong>Taste: </strong> Sweet, creamy</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="turkishCoffeeModal"
+      tabindex="-1"
+      aria-labelledby="turkishCoffeeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="turkishCoffeeModalLabel">
+              <i class="fa-solid fa-list-ul"></i> Turkish Coffee
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> Finely ground beans</li>
+              <li><strong>Method: </strong> Brewed in cezve</li>
+              <li><strong>Serving: </strong> With foam</li>
+              <li><strong>Taste: </strong> Strong, intense</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="coldBrewModal"
+      tabindex="-1"
+      aria-labelledby="coldBrewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="coldBrewModalLabel">
+              <i class="fa-solid fa-list-ul"></i> Cold Brew
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> 100% Arabica</li>
+              <li><strong>Method: </strong> Cold extraction</li>
+              <li><strong>Time: </strong> 12–24 hours</li>
+              <li><strong>Taste: </strong> Smooth, low acidity</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade detailsmodal"
+      id="nitroColdBrewModal"
+      tabindex="-1"
+      aria-labelledby="nitroColdBrewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="nitroColdBrewModalLabel">
+              <i class="fa-solid fa-list-ul"></i> N. Cold Brew
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Origin: </strong> 100% Arabica</li>
+              <li><strong>Method: </strong> Nitrogen infused</li>
+              <li><strong>Texture: </strong> Creamy</li>
+              <li><strong>Taste: </strong> Rich, smooth</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light"></footer>
+
+    <script src="Shop-Coffee.js"></script>
   </body>
 </html>
